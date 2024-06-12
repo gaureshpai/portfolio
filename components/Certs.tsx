@@ -1,8 +1,7 @@
 "use client"
 
-import { NextResponse } from 'next/server';
 import React, { useState, useEffect } from 'react';
-import GET from '../../utils/certs.js';
+import GET from '../utils/certs.js';
 import '@/styles/pages.css';
 
 async function getdata() {

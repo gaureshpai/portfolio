@@ -1,7 +1,7 @@
 'use server';
 
 import { connect } from './db';
-import Cert from '../app/models/Cert';
+import Cert from '../models/Cert';
 
 const GET = async () => {
     try {
