@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .text-shadow-lg {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+}
+
+h1 {
+    @apply text-2xl text-shadow-lg;
+}
+
+html,
+body {
+  @apply m-0 p-0 overflow-x-hidden;
+}
+
+.MainBody {
+  @apply bg-fixed bg-cover bg-center;
+}
+
+.content_body {
+  @apply h-auto w-auto md:w-full p-4;
+}
+
+@media screen and (max-width: 768px) {
+  .content_body {
+    @apply block;
+  }
+}
+
+h2 {
+  @apply underline;
+}
+
+.point {
+  @apply cursor-pointer text-white no-underline;
+}
+
+.topbar {
+  @apply bg-gradient-to-b from-gray-800 to-black w-full h-[15vh] flex justify-between items-center shadow-md px-20 box-border;
+}
+
+.header-container {
+  @apply flex items-center text-white font-serif justify-center text-center mt-20;
+}
+
+.menu {
+  @apply flex flex-wrap mt-20;
+}
+
+.menu_button {
+  @apply no-underline text-white py-2 px-4 rounded bg-gray-700 transition-colors duration-300 ease-in-out m-2;
+}
+
+.menu_button:hover {
+  @apply bg-gray-800;
+}
+
+.intro {
+  @apply mt-20 p-5 m-2 bg-gray-100 shadow-md rounded-lg text-center transition-transform duration-200 ease-in-out box-border min-h-[40vh];
+}
+
+.intro p {
+  @apply mt-5 leading-loose no-underline;
+}
+
+.container {
+  @apply flex justify-center items-center min-h-[80vh] min-w-[80vw];
+}
+
+.contactInfo {
+  @apply p-5 m-2 justify-start shadow-md rounded-lg text-center transition-transform duration-200 ease-in-out box-border min-h-[50vh] grid grid-cols-3 gap-4;
+}
+
+.headingc {
+  @apply bg-white flex justify-center items-center text-center p-1 rounded-lg;
+}
+
+@media screen and (max-width: 768px) {
+  .contactInfo {
+    @apply grid-cols-1;
+  }
+}
+
+.contactInfo p {
+  @apply mt-5 leading-loose no-underline;
+}
+
+.project {
+  @apply p-5 m-2 shadow-md rounded-lg text-center transition-transform duration-200 ease-in-out box-border min-h-[40vh] min-w-[60vw];
+}
+
+.project h2 {
+  @apply text-center mb-5;
+}
+
+.projectitem {
+  @apply mb-10 bg-white p-5 m-2 shadow-md rounded-lg text-center transition-transform duration-200 ease-in-out box-border min-h-[40vh] min-w-[60vw];
+}
+
+.projectitem h3 {
+  @apply mb-5;
+}
+
+.projectitem p {
+  @apply mb-5;
+}
+
+.projectitem ul {
+  @apply pl-5 mb-5;
+}
+
+.projectitem a {
+  @apply text-blue-500 underline;
+}
+
+.projectitem a:hover {
+  @apply no-underline;
+}
+
+.project h2 {
+  @apply bg-white p-2 rounded text-center;
+}
+
+.Certificates {
+  @apply p-5 m-2 shadow-md rounded-lg text-center transition-transform duration-200 ease-in-out box-border min-h-[40vh] min-w-[80vw];
+}
+
+.certification-grid {
+  @apply grid grid-cols-3 gap-5;
+}
+
+.certification {
+  @apply flex flex-col justify-center items-center m-2 bg-gray-100 shadow-md rounded-lg transition-transform duration-200 ease-in-out;
+}
+
+.certification img {
+  @apply max-w-full h-auto max-h-[200px];
+}
+
+.footer {
+  @apply bg-gray-800 text-white p-5 text-center;
+}
+
+.container3 {
+  @apply max-w-[960px] mx-auto;
+}
+
+.contact {
+  @apply p-5 m-2 shadow-md rounded-lg text-center transition-transform duration-200 ease-in-out box-border min-h-[40vh] min-w-[60vw];
+}
+
+.contact-item {
+  @apply bg-white m-2 shadow-md rounded-lg text-center transition-transform duration-200 ease-in-out box-border;
+}
+
+.content_body {
+  @apply h-auto w-auto;
+}
+
+.contactInfo > .education-heading {
+  @apply col-span-3;
+}
+
+.education-heading {
+  @apply bg-white p-2 rounded shadow-sm;
+}
+
+.info {
+  @apply bg-white p-5 m-2 shadow-md rounded-lg;
+}
+
+@media screen and (max-width: 768px) {
+  .topbar {
+    @apply grid p-2 justify-start grid-cols-1 min-h-[15vh] justify-items-center mb-20;
+  }
+
+  .MainBody {
+    @apply bg-fixed bg-cover bg-center bg-[url('/mobile.jpeg')];
+  }
+
+  .container {
+    @apply block items-center min-h-[80vh] min-w-[80vw] mt-20 overflow-y-scroll;
+  }
+
+  .contactInfo {
+    @apply block;
+  }
+
+  .Certificates {
+    @apply p-2 m-1;
+  }
+
+  .certification-grid {
+    @apply grid-cols-1;
+  }
+}

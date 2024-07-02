@@ -1,6 +1,5 @@
 'use client'
 import React, { useState } from 'react';
-import '@/styles/projects.css';
 
 // Define the Project type and projects array
 type Project = {

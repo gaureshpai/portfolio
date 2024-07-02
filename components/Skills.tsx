@@ -15,7 +15,6 @@ import {
     FaDocker,
     FaAws,
 } from 'react-icons/fa';
-import '@/styles/skills.css';
 
 const Skills = () => {
     const calculateProgress = (percentage: number) => {

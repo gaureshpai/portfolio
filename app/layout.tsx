@@ -1,7 +1,5 @@
 import { Metadata } from 'next'
-import '../styles/pages.css'
 import Navbar from '@/components/Navbar'
-import Main from '@/components/Main'
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
@@ -22,9 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="MainBody">
+      <body className="bg-fixed bg-cover bg-center overflow-x-hidden bg-[url('/background.jpg')]">
         <Navbar />
-        <div className='content_body'>
+        <div className="content_body h-auto w-auto md:w-full p-4">
           {children}
         </div>
         <Footer />
