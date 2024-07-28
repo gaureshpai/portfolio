@@ -1,11 +1,11 @@
 import { Metadata } from 'next'
-import '../styles/globals.css'
+import '@/public/styles/globals.css'
 import Navbar from '@/components/Navbar'
-import Main from '@/components/Main'
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Gauresh's Portfolio website",
+  description: "Dev by Gauresh",
   icons: {
     icon: ['favicon.ico?v=4'],
     apple: ['apple-touch-icon.png?v=4'],
@@ -24,6 +24,7 @@ export default function RootLayout({
       <body className="MainBody">
         <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   );
