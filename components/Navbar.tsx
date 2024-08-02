@@ -115,9 +115,9 @@ const Navbar = () => {
 
         {isOpen && (
           <div className="lg:hidden flex-row">
-            <div className="pt-2 pb-3 space-y-1 sm:px-3 flex-row flex">
+            <div className="pt-2 pb-3 space-y-1 sm:px-3 flex-row flex text-center justify-center">
               {navItems.map((item) => (
-                <Link key={item.name} href={item.href} className="text-white hover:text-blue-500 px-3 py-2 rounded-md text-base font-medium flex items-center">
+                <Link key={item.name} href={item.href} className="text-white hover:text-blue-500 px-3 py-2 rounded-md text-3xl font-medium flex items-center">
                   <item.icon />
                 </Link>
               ))}
