@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#about,
+#certificates,
+#contact,
+#education,
+#experience,
+#projects,
+#skills {
+    padding-top: 15vh;
+    margin-top: -15vh;
+    z-index: -1;
+}

@@ -2,7 +2,7 @@ import React from 'react'
 
 const skills = () => {
   return (
-    <div>skills</div>
+    <div id='skills'>skills</div>
   )
 }
 

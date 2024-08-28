@@ -29,7 +29,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setOpacity(Math.max(0.4, 1 - currentScrollY / 500));
+      setOpacity(Math.max(0.8, 1 - currentScrollY / 500));
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -56,11 +56,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 bg-black shadow-md md:h-[10vh] transition-opacity duration-300 z-50" style={{ opacity }}>
-        <div className="h-[10vh] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
+      <nav className="fixed top-0 left-0 right-0 bg-black shadow-md md:h-[15vh] transition-opacity duration-300 z-50" style={{ opacity }}>
+        <div className="h-[15vh] mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+          <div className="flex justify-between w-full">
             <div className="flex items-center">
-              <div className="flex max-h-[10vh]">
+              <div className="md:ml-10 flex max-h-[10vh]">
                 <Link href="/" legacyBehavior>
                   <Image
                     src='/logo.png'
@@ -73,7 +73,7 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="hidden md:block md:float-right relative">
-                <div className="ml-10 flex items-baseline space-x-4">
+                <div className="ml-10 flex items-center space-x-4">
                   {navItems.map((item) => (
                     <div
                       key={item.name}
@@ -95,7 +95,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="-mr-2 flex md:hidden flex-row">
+            <div className="-mr-2 flex md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 title="Menu"
@@ -114,8 +114,8 @@ const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className="lg:hidden flex-row">
-            <div className="pt-2 pb-3 space-y-1 sm:px-3 flex-row flex text-center justify-center">
+          <div className="lg:hidden items-center">
+            <div className="pt-2 pb-3 space-y-1 sm:px-3 flex flex-row items-center">
               {navItems.map((item) => (
                 <Link key={item.name} href={item.href} className="text-white hover:text-blue-500 px-3 py-2 rounded-md text-3xl font-medium flex items-center">
                   <item.icon />
@@ -125,7 +125,7 @@ const Navbar = () => {
           </div>
         )}
       </nav>
-      <div className="h-[10vh]"></div>
+      <div className="h-[15vh]"></div>
     </>
   );
 };
